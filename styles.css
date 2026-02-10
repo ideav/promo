@@ -142,6 +142,28 @@ h1, h2, h3 {
     background: #3b82f6;
 }
 
+/* ===== Logo Banner (after Hero) ===== */
+.logo-banner {
+    padding: 40px 0;
+    background: var(--color-bg);
+}
+
+.logo-banner-inner {
+    text-align: center;
+}
+
+.logo-banner-img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 639px) {
+    .logo-banner {
+        display: none;
+    }
+}
+
 /* ===== Block 2: Problems ===== */
 .problems {
     background: var(--color-bg-alt);
