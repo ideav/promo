@@ -193,50 +193,25 @@
                     <textarea id="task-description" rows="4" placeholder="Например: Нам нужна система для учета заявок от клиентов. Сейчас все ведем в Excel, это неудобно. Нужны статусы заявок, история общения и отчеты по менеджерам..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Для чего в первую очередь нужна система?</label>
-                    <div class="radio-group radio-group-vertical">
-                        <label class="radio-option">
-                            <input type="radio" name="system-type" value="Учет клиентов (CRM)">
-                            <span class="radio-label">Учет клиентов (CRM)</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="system-type" value="Учет товаров, материалов или заказов (Склад, ERP)">
-                            <span class="radio-label">Учет товаров, материалов или заказов (Склад, ERP)</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="system-type" value="Управление проектами и задачами">
-                            <span class="radio-label">Управление проектами и задачами</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="system-type" value="Внутренний портал для сотрудников">
-                            <span class="radio-label">Внутренний портал для сотрудников</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="system-type" value="Другое (будет учтено из описания)">
-                            <span class="radio-label">Другое (будет учтено из описания)</span>
-                        </label>
-                    </div>
+                    <label for="system-type">Для чего в первую очередь нужна система?</label>
+                    <select id="system-type" name="system-type">
+                        <option value="" disabled selected>Выберите вариант...</option>
+                        <option value="Учет клиентов (CRM)">Учет клиентов (CRM)</option>
+                        <option value="Учет товаров, материалов или заказов (Склад, ERP)">Учет товаров, материалов или заказов (Склад, ERP)</option>
+                        <option value="Управление проектами и задачами">Управление проектами и задачами</option>
+                        <option value="Внутренний портал для сотрудников">Внутренний портал для сотрудников</option>
+                        <option value="Другое (будет учтено из описания)">Другое (будет учтено из описания)</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label>Сколько примерно сотрудников будут пользоваться системой?</label>
-                    <div class="radio-group radio-group-vertical">
-                        <label class="radio-option">
-                            <input type="radio" name="user-count" value="Только я (1)">
-                            <span class="radio-label">Только я (1)</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="user-count" value="Небольшая команда (2-10)">
-                            <span class="radio-label">Небольшая команда (2-10)</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="user-count" value="Средний отдел (11-50)">
-                            <span class="radio-label">Средний отдел (11-50)</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="user-count" value="Вся компания (50+)">
-                            <span class="radio-label">Вся компания (50+)</span>
-                        </label>
-                    </div>
+                    <label for="user-count">Сколько примерно сотрудников будут пользоваться системой?</label>
+                    <select id="user-count" name="user-count">
+                        <option value="" disabled selected>Выберите вариант...</option>
+                        <option value="Только я (1)">Только я (1)</option>
+                        <option value="Небольшая команда (2-10)">Небольшая команда (2-10)</option>
+                        <option value="Средний отдел (11-50)">Средний отдел (11-50)</option>
+                        <option value="Вся компания (50+)">Вся компания (50+)</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Какие возможности вам точно понадобятся? <span class="optional">(необязательно)</span></label>

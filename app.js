@@ -76,9 +76,9 @@ function nextStep(fromStep) {
     } else if (fromStep === 2) {
         // Collect task data
         quizData.description = document.getElementById('task-description').value.trim();
-        const sysType = document.querySelector('input[name="system-type"]:checked');
+        const sysType = document.getElementById('system-type');
         quizData.systemType = sysType ? sysType.value : '';
-        const userCount = document.querySelector('input[name="user-count"]:checked');
+        const userCount = document.getElementById('user-count');
         quizData.userCount = userCount ? userCount.value : '';
 
         quizData.features = [];
