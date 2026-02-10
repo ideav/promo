@@ -514,7 +514,7 @@ h1, h2, h3 {
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    margin-top: 8px;
 }
 
 .radio-group-vertical {
@@ -526,8 +526,8 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 16px;
-    border: 1px solid var(--color-border);
+    padding: 8px 16px 8px 16px;
+    /* border: 1px solid var(--color-border); */
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all var(--transition);
