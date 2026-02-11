@@ -75,7 +75,7 @@ function nextStep(fromStep) {
         updateProgress(2);
     } else if (fromStep === 2) {
         // Collect task data
-        quizData.description = document.getElementById('task-description').value.trim();
+        quizData.description = ''; //document.getElementById('task-description').value.trim();
         const sysType = document.getElementById('system-type');
         quizData.systemType = sysType ? sysType.value : '';
         const userCount = document.getElementById('user-count');
@@ -391,4 +391,74 @@ document.getElementById('quiz-overlay').addEventListener('click', function(e) {
     if (e.target === this) {
         closeQuiz();
     }
+});
+
+/* ===== Header Scroll Effect ===== */
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    lastScrollTop = scrollTop;
+});
+
+/* ===== Mobile Menu Toggle ===== */
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const nav = document.querySelector('.nav');
+
+mobileMenuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    nav.classList.toggle('show');
+    document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : '';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        mobileMenuToggle.classList.remove('active');
+        nav.classList.remove('show');
+        document.body.style.overflow = '';
+    });
+});
+
+/* ===== Cookie Banner ===== */
+const cookieBanner = document.getElementById('cookie-banner');
+const cookieAccept = document.getElementById('cookie-accept');
+const cookieDecline = document.getElementById('cookie-decline');
+const cookieClose = document.getElementById('cookie-close');
+
+// Check if user already made a choice
+function checkCookieChoice() {
+    return localStorage.getItem('cookieConsent');
+}
+
+// Show banner if no choice made
+if (!checkCookieChoice()) {
+    setTimeout(function() {
+        cookieBanner.classList.add('show');
+    }, 1000);
+}
+
+// Accept cookies
+cookieAccept.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    cookieBanner.classList.remove('show');
+});
+
+// Decline cookies
+cookieDecline.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'declined');
+    cookieBanner.classList.remove('show');
+});
+
+// Close banner (temporary)
+cookieClose.addEventListener('click', function() {
+    cookieBanner.classList.remove('show');
 });

@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="https://integram.io/img/logo2.svg" alt="Интеграм" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#hero" class="nav-link">Главная</a>
+                <a href="#problems" class="nav-link">Решения</a>
+                <a href="#how-it-works" class="nav-link">Как мы работаем</a>
+                <a href="#audience" class="nav-link">Кому подходит</a>
+                <a href="#final-cta" class="nav-link">Контакты</a>
+            </nav>
+            <button class="btn btn-primary btn-header" onclick="openQuiz()">Рассчитать проект</button>
+            <button class="mobile-menu-toggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
     <!-- Block 1: Hero -->
     <section id="hero" class="section hero">
         <div class="container">
@@ -198,10 +220,6 @@
             <div class="quiz-step" id="quiz-step-2" style="display: none;">
                 <h2>Опишите вашу задачу</h2>
                 <div class="form-group">
-                    <label for="task-description">Описание</label>
-                    <textarea id="task-description" rows="4" placeholder="Например: Нам нужна система для учета заявок от клиентов. Сейчас все ведем в Excel, это неудобно. Нужны статусы заявок, история общения и отчеты по менеджерам..."></textarea>
-                </div>
-                <div class="form-group">
                     <label for="system-type">Для чего в первую очередь нужна система?</label>
                     <select id="system-type" name="system-type">
                         <option value="" disabled selected>Выберите вариант...</option>
@@ -318,6 +336,70 @@
                     <button class="btn btn-primary" onclick="closeQuiz()">Закрыть</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://integram.io/img/logo2.svg" alt="Интеграм" class="footer-logo-img">
+                        <p class="footer-description">Безопасная и удобная платформа для управления данными. Замените Excel на современную систему за считанные дни.</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#problems">Решения</a></li>
+                        <li><a href="#how-it-works">Как мы работаем</a></li>
+                        <li><a href="#audience">Кому подходит</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://integram.io" target="_blank">О компании</a></li>
+                        <li><a href="https://integram.io" target="_blank">Блог</a></li>
+                        <li><a href="https://integram.io" target="_blank">Документация</a></li>
+                        <li><a href="https://integram.io" target="_blank">Поддержка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@integram.io">info@integram.io</a></li>
+                        <li><a href="tel:+78000000000">8 800 000-00-00</a></li>
+                        <li>Россия, Москва</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 Интеграм. Все права защищены.</p>
+                    <p class="footer-requisites">ИНН 0000000000 | ОГРН 0000000000000</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-bottom-link">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-banner-container">
+            <div class="cookie-content">
+                <p class="cookie-text">Мы используем файлы cookie для улучшения работы сайта и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="#" class="cookie-link">Политикой конфиденциальности</a>.</p>
+                <div class="cookie-buttons">
+                    <button class="btn btn-primary cookie-accept" id="cookie-accept">Принять</button>
+                    <button class="btn btn-secondary cookie-decline" id="cookie-decline">Отклонить</button>
+                </div>
+            </div>
+            <button class="cookie-close" id="cookie-close" aria-label="Закрыть">&times;</button>
         </div>
     </div>
 
