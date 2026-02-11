@@ -112,10 +112,11 @@ h1, h2, h3 {
 
 /* ===== Block 1: Hero ===== */
 .hero {
-    padding: 140px 0 100px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-    color: #fff;
-    text-align: center;
+    background-image: url(https://integram.io/img/main-bg.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+	text-align: center;
 }
 
 .hero h1 {
@@ -144,7 +145,7 @@ h1, h2, h3 {
 
 /* ===== Logo Banner (after Hero) ===== */
 .logo-banner {
-    padding: 40px 0;
+    padding: 0;
     background: var(--color-bg);
 }
 
@@ -156,6 +157,7 @@ h1, h2, h3 {
     display: inline-block;
     max-width: 100%;
     height: auto;
+	opacity: 75%;
 }
 
 @media (max-width: 639px) {
